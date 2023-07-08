@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
 
 * {
     margin: 0;
     padding: 0;
-    border: none;
+    border: 0;
 }
+
 body {
     font-family: Lato, sans-serif;
-    font-weight: 300;
-    color:#3a3a3a;
-
+    color: #3a3a3a;
 }
 
-/* headings and logo*/
+/* headings and logo */
 
-h1, h2 {
+h1,
+h2 {
     font-family: Oswald, sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -27,22 +27,24 @@ h1, h2 {
     margin-left: 30px;
 }
 
-/* navigation links*/
+/* navigation links */
 
 #menu {
     font-size: 110%;
     letter-spacing: 4px;
-
 }
-#menu, #logo{
+
+#logo,
+#menu {
     line-height: 75px;
 }
-#menu li{
+
+#menu li {
     float: right;
     list-style-type: none;
     margin-right: 30px;
-
 }
+
 #menu a {
     text-decoration: none;
     color: inherit;
@@ -56,7 +58,7 @@ h1, h2 {
     border-bottom: 1px solid #3a3a3a;
 }
 
-/* hero image*/
+/* Hero image and cover text */
 
 #hero-outer {
     height: 600px;
@@ -65,37 +67,38 @@ h1, h2 {
     position: relative;
 }
 
-#cover-text, #cover-text h2 {
-    color: #fff;
-}
-
 #hero-image {
     height: 600px;
     width: 100%;
-    background: url('../css/images/hero-image.webp') no-repeat center center;
+    background: url("https://codeinstitute.s3.amazonaws.com/FundamentalsProjects/HTML-CSS/main-image.png") no-repeat center center;
 
-    /* animates zoom effect on loading page */
+    /* Animates zoom effect on loading the page */
     animation-name: hero-zoom;
     animation-duration: 5s;
     animation-fill-mode: forwards;
 }
 
-/*creates the level of zoom for hero image*/
-
+/* Creates the level of zoom for hero image */
 @keyframes hero-zoom {
-    from{
-       transform: scale(1); 
+    from {
+        transform: scale(1);
     }
-    to{
-        transform: scale(1.1); 
+
+    to {
+        transform: scale(1.1);
     }
+}
+
+#cover-text,
+#cover-text h2 {
+    color: #ffffff;
 }
 
 #cover-text {
     font-size: 130%;
-    font-family: Oswald, sans-serif;
+    font-family: Oswald;
     text-transform: uppercase;
-    letter-spacing: 4px;    
+    letter-spacing: 4px;
 
     width: 300px;
     height: 200px;
@@ -103,7 +106,7 @@ h1, h2 {
     padding-top: 40px;
     padding-left: 10px;
 
-    background-color: rgba(241,109,107,.7);
+    background-color: rgba(241, 109, 107, .7);
 
     bottom: 30px;
     right: 150px;
@@ -112,7 +115,7 @@ h1, h2 {
 
 }
 
-/* club ethos*/
+/* Club ethos */
 
 #club-ethos {
     height: 600px;
@@ -122,22 +125,19 @@ h1, h2 {
     padding-top: 30px;
     width: 33%;
     float: left;
-    
 }
 
 #right-about {
     padding-top: 30px;
     width: 33%;
     float: right;
-    
 }
 
 #center-about {
     width: 33%;
     margin: 0 auto;
-    
-
 }
+
 hr {
     border-top: 1px solid #3a3a3a;
     width: 100%;
@@ -160,17 +160,19 @@ hr {
     margin-bottom: 50px;
 }
 
+.right-about-heading p {
+    text-align: right;
+}
+
 .right-about-heading h2 {
     text-align: right;
 }
 
-.right-about-heading {
-    text-align: right;
-}
+/* Club ethos center image */
 
 #welcome {
-    text-align: center;
     margin: 20px 0;
+    text-align: center;
     font-size: 280%;
 }
 
@@ -179,22 +181,22 @@ hr {
     height: 300px;
     padding: 30px;
     border-style: solid;
-    border-color: #ccc;
+    border-color: #cccccc;
     border-width: 1px;
     border-radius: 50%;
     margin: 0 auto;
 }
 
 #circle-cover-bg {
-    background: url(../css/images/ethos-center-image.jpg) no-repeat center center;
+    background: url("https://codeinstitute.s3.amazonaws.com/FundamentalsProjects/HTML-CSS/video-mask.png") no-repeat center center;
     height: 100%;
     border-radius: 50%;
 }
 
-/* event times*/
+/* Event times */
 
 #times {
-    background-image: url(../css/images/dublin-city.webp);
+    background-image: url("https://codeinstitute.s3.amazonaws.com/FundamentalsProjects/HTML-CSS/dublin-city.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -212,14 +214,13 @@ hr {
     text-align: center;
     border: 2px solid white;
     box-sizing: border-box;
-
 }
 
 #times h2 {
     color: #fafafa;
 }
 
-/* footer*/
+/* Footer */
 
 footer {
     height: 150px;
@@ -227,11 +228,13 @@ footer {
 
 .social-networks {
     text-align: center;
+
 }
 
-.social-networks > li {
+.social-networks li {
     display: inline;
 }
+
 .social-networks i {
     font-size: 160%;
     margin: 1%;
@@ -239,106 +242,163 @@ footer {
     color: #3a3a3a;
 }
 
-/* gallery */
+/* Gallery Photos */
 
-#photos {
+#photo {
     clear: both;
     line-height: 0;
     column-count: 4;
-    column-gap: 0;
+    column-gap: 0px;
 }
 
-#photos > img {
+#photo img {
     width: 100%;
 }
 
-/* medial queries */
+/* Form */
 
-/* For larger to medium screen size from 1200px wide and down */
-@media screen and (max-width:1200px) {
-
-#club-ethos {
-    width:65%;
-    height: 1200px;
-    margin: 0 auto;
+.form-section {
+    clear: left;
+    background: url("https://codeinstitute.s3.amazonaws.com/FundamentalsProjects/HTML-CSS/formbg.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 900px;
 }
 
-#welcome {
-    padding: 30px 0;
-    margin: 0;
+.signup-form {
+    margin: 150px 10% 0 0;
+    color: #fff;
+    background-color: rgba(60, 60, 60, 0.6);
+    max-width: 400px;
+    position: absolute;
+    left: 10%;
+    padding: 30px;
 }
 
-#left-about, #right-about {
+.signup-form>h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
     width: 100%;
-    float: left;
-    padding: 0;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
 }
 
-#center-about {
-    clear: both;
-    width: 100%;
-    float: left;
-    padding: 0;
+.text-input:hover {
+    border-color: #f16c6b;
 }
 
-hr {
-    display: none;
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px 15px 32px;
+    text-align: center;
+    font-size: 100%;
+    background-color: #f16c6b;
+    color: #fafafa;
+    display: block;
+
 }
 
-#times > div {
-    width: 100%;
-    clear: both;
-    height: 150px;
-    padding: 0;
-}
+.join-button:hover {
+    background-color: #fafafa;
+    color: #f16c6b;
+
 }
 
-/* For medium screen sizes from 950px wide and down */
-@media screen and (max-width:950px) {
+/* Media queries */
+
+/* For large to medium screens sizes from 1200px wide and down */
+@media screen and (max-width: 1200px) {
+    #club-ethos {
+        width: 65%;
+        height: 1200px;
+        margin: 0 auto;
+    }
+
+    #welcome {
+        padding: 30px 0;
+        margin-top: 0;
+    }
+
+    #left-about,
+    #right-about {
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #center-about {
+        clear: both;
+        width: 100%;
+        float: left;
+        padding: 0;
+    }
+
+    #times div {
+        width: 100%;
+        clear: both;
+        height: 150px;
+        padding: 0;
+    }
+
+    hr {
+        display: none;
+    }
+}
+
+/* For medium screens sizes from 950px wide and down */
+@media screen and (max-width: 950px) {
 
     #menu {
         clear: left;
         float: left;
         margin-left: 30px;
-        margin-bottom: 20px;    
+        margin-bottom: 20px;
         line-height: 25px;
-
     }
 
     #cover-text {
-        left: 0;
-
+        left: 0px;
     }
 
     #club-ethos {
         width: 90%;
         height: 1200px;
         margin: 0 auto;
-
     }
 
-    .left-about-heading, .right-about-heading {
+    .left-about-heading,
+    .right-about-heading {
         width: inherit;
     }
 
-    .left-about-heading h2, .right-about-heading h2 {
+    .left-about-heading h2,
+    .right-about-heading h2 {
         width: 100%;
         text-align: center;
     }
 
-    .left-about-heading p, .right-about-heading p {
+    .left-about-heading p,
+    .right-about-heading p {
         text-align: center;
-        padding: 0 20px;
+        padding: 0 20px 0 20px;
     }
 
-    #photos {
+    #photo {
         column-count: 3;
     }
 }
-/* For screen sizes 800px and down */
-@media screen  and (max-width: 800px) {
-    #photos {
+
+/* For small screens sizes from 800px wide and down */
+@media screen and (max-width: 800px) {
+    #photo {
         column-count: 2;
     }
-    
 }
